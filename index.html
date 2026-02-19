@@ -20,23 +20,11 @@
 
 </head>
 <body>
-<nav>
-  <div class="navbar bg-base-100 shadow-sm">
+<nav class="container">
+  <div class="navbar ">
     <div class="navbar-start">
-      <div class="dropdown">
-        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
-        </div>
-        <ul
-          tabindex="0"
-          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow right-0">
-          <li><a>Home</a></li>
-          <li><a>Products</a></li>
-          <li><a>About</a></li>
-          <li><a>Contact</a></li>
-        </ul>
-      </div>
-      <a class="btn btn-ghost text-xl">SwiftCart </a>
+  
+      <a class="btn btn-ghost text-xl text-blue-800 ">SwiftCart </a>
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
@@ -48,40 +36,54 @@
     </div>
     <div class="navbar-end">
       <a class="btn"><i class="fa-solid fa-cart-shopping"></i></a>
+          <!-- Mobile Version Start-->
+          <div class="dropdown ">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden ">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow right-0">
+              <li><a>Home</a></li>
+              <li><a>Products</a></li>
+              <li><a>About</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+          <!-- Mobile Version End-->
     </div>
   </div>
 </nav>
 
-<section class="hero">
+<section class="hero ">
   <div
-  class="hero min-h-screen"
+  class="hero min-h-96"
   style="background-image: url('./Assets/banner-image.png');"
 >
   <div class="hero-overlay"></div>
-  <div class="hero-content text-neutral-content flex">
-    <div class="max-w-md">
+  <div class="hero-content text-neutral-content w-full  flex justify-start container">
+    <div class="">
       <h1 class="mb-5 text-5xl font-bold text-start">Hello there</h1>
-      <p class="mb-5 text-start">
+      <p class="mb-5 text-start lg:w-3/4 w-full">
         Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
         quasi. In deleniti eaque aut repudiandae et a id nisi.
       </p>
       <button class="btn btn-primary flex ">Get Started</button>
     </div>
-    <div>
-
-    </div>
+    
+  
   </div>
 </div>
 </section>
 
-<section class="why-choose-us">
+<section class="why-choose-us container">
   <div class="title">
-    <h2 class="mb-5 mt-5 text-5xl font-bold text-center">Why Choose Us</h2>
-    <p class="mb-5 text-center">We provide the best shopping experience with top-notch services.</p>
+    <h2 class="mb-2 mt-5 text-2xl font-bold text-center">Why Choose Us</h2>
+    <p class="mb-10 text-center text-gray-600">We provide the best shopping experience with top-notch services.</p>
 
   </div>
   <div class="features grid grid-cols-1 md:grid-cols-4 gap-6">
-    <div class="feature-card card bg-base-100 shadow-xl">
+    <div class="feature-card card bg-white  shadow-xl">
       <div class="card-body">
         <div>
           <i class="fa-solid fa-truck text-2xl"></i>
@@ -95,14 +97,15 @@
         <div>
           <i class="fa-solid fa-headphones text-2xl"></i>
         </div>
-        <h2 class="card-title">24/7 Support</h2>
+        <h2 class="card-title text-gray-800">24/7 Support</h2>
         <p>Enjoy quick and reliable delivery to your doorstep.</p>
       </div>
     </div>
     <div class="feature-card card bg-base-100 shadow-xl">
       <div class="card-body">
-        <div>
-          <i class="fa-solid fa-shield text-2xl"></i>
+        <div class="icon ">
+          <i class="fa-regular fa-shield"></i>
+          <!-- <i class="fa-regular fa-shield text-2xl text-blue-400 "></i> -->
         </div>
         <h2 class="card-title">Secure payment</h2>
         <p>Our customer support team is here to assist you anytime.</p>
@@ -122,7 +125,105 @@
   </div>
 
 </section>
+<!-- <section class="trending container">
+  <div class="title">
+    <h2 class="mb-5 mt-5 text-5xl font-bold text-center">Trending Now</h2>
+  </div>
+
+  <div class="trendingItems grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="card bg-base-100 w-96 shadow-sm">
+      <figure>
+        <img
+          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+          alt="Shoes" />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">
+          Card Title
+          <div class="badge badge-secondary">NEW</div>
+        </h2>
+        <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+        <div class="card-actions justify-end">
+          <div class="badge badge-outline">Fashion</div>
+          <div class="badge badge-outline">Products</div>
+        </div>
+      </div>
+    </div>
+    <div class="card bg-base-100 w-96 shadow-sm">
+      <figure>
+        <img
+          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+          alt="Shoes" />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">
+          Card Title
+          <div class="badge badge-secondary">NEW</div>
+        </h2>
+        <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+        <div class="card-actions justify-end">
+          <div class="badge badge-outline">Fashion</div>
+          <div class="badge badge-outline">Products</div>
+        </div>
+      </div>
+    </div>
+    <div class="card bg-base-100 w-96 shadow-sm">
+      <figure>
+        <img
+          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+          alt="Shoes" />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">
+          Card Title
+          <div class="badge badge-secondary">NEW</div>
+        </h2>
+        <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+        <div class="card-actions justify-end">
+          <div class="badge badge-outline">Fashion</div>
+          <div class="badge badge-outline">Products</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
    
+    <!-- <footer class="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
+      <nav>
+        <h6 class="footer-title">Services</h6>
+        <a class="link link-hover">Branding</a>
+        <a class="link link-hover">Design</a>
+        <a class="link link-hover">Marketing</a>
+        <a class="link link-hover">Advertisement</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Company</h6>
+        <a class="link link-hover">About us</a>
+        <a class="link link-hover">Contact</a>
+        <a class="link link-hover">Jobs</a>
+        <a class="link link-hover">Press kit</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Legal</h6>
+        <a class="link link-hover">Terms of use</a>
+        <a class="link link-hover">Privacy policy</a>
+        <a class="link link-hover">Cookie policy</a>
+      </nav>
+    <form>
+        <h6 class="footer-title">Newsletter</h6>
+        <fieldset class="w-80">
+          <label>Enter your email address</label>
+          <div class="join">
+            <input
+              type="text"
+              placeholder="username@site.com"
+              class="input input-bordered join-item" />
+            <button class="btn btn-primary join-item">Subscribe</button>
+          </div>
+        </fieldset>
+      </form> 
+    </footer> -->
+  
     
 </body>
 </html>

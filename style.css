@@ -1,3 +1,46 @@
 *{
     font-family: "Inter", sans-serif;
 }
+/* Mobile First */
+.container{
+width: 100%;
+margin: auto;
+}
+
+/* Dekstop View */
+@media (min-width: 1024px) {
+    .container{
+        width: 70%;
+        margin: auto;
+    }
+    
+}
+
+.navbar .btn {
+   background: #fff;
+   border: none;
+}
+.navbar .menu li:hover a {
+background: #fff;
+border: none;
+color: blue;
+
+}
+.icon{
+    position: relative;
+}
+
+.icon i{
+    position: absolute;
+    background: #f8fbfc;
+    width:50px;
+    height: auto;
+    padding: 10px 10px;
+    border-radius: 7px;
+    border: 2px solid #edecec;
+    top: -40px;
+    left: -3px;
+}
+ .card-title{
+    padding-top: 15px;
+}
