@@ -5,6 +5,7 @@
 .container{
 width: 100%;
 margin: auto;
+
 }
 
 /* Dekstop View */
@@ -12,6 +13,7 @@ margin: auto;
     .container{
         width: 70%;
         margin: auto;
+        
     }
     
 }
@@ -31,16 +33,51 @@ color: blue;
 }
 
 .icon i{
+    color: #4C36F6;
     position: absolute;
-    background: #f8fbfc;
-    width:50px;
+    background: #EEF2FF;
+    width:55px;
     height: auto;
     padding: 10px 10px;
-    border-radius: 7px;
-    border: 2px solid #edecec;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
     top: -40px;
     left: -3px;
 }
  .card-title{
     padding-top: 15px;
+}
+.why-choose-us{
+    padding-bottom: 100px;
+    height: auto;
+   background: #F9FAFB;
+
+}
+/* .trendingItems .cardBtngroup{
+    display: flex;
+
+} */
+
+.catagoryBadge{
+   width: 85%;
+   display: flex;
+   justify-content: space-between; 
+
+}
+.catagoryBadge .ratings{
+    padding-left: 20px;
+}
+.catagoryBadge .ratings span{
+    color:#535353;
+    font-weight: 600;
+    padding-left: 5px;
+
+}
+.trendingItems .cardBtn{
+    border-radius: 10px;
+    width: 48%;
+}
+.cardBtngroup button:nth-child(2){
+    color: #fff;
+    background:#4C36F6;
 }
