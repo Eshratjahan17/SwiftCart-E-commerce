@@ -81,3 +81,26 @@ color: blue;
     color: #fff;
     background:#4C36F6;
 }
+.copyright{
+    background: #1E2939;
+    
+}
+.mainFooter{
+    background: #1E2939;  
+    
+}
+.catagory_badge .badge{
+    border: #707070 1px solid;
+    padding: 12px;
+    border-radius: 50px;
+
+}
+.catagory_badge .badge:hover{
+    background: #4C36F6;
+    color: #fff;
+}
+
+.catagory_badge .badge:active{
+    background: #4C36F6;
+    color: #fff;
+}
