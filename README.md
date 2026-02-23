@@ -21,3 +21,11 @@ when we fetch data from an API, it takes time(Network delay). javascript does no
 #### 5) Explain the concept of Scope in JavaScript (Global, Function, Block).
 Scope is a coding block , where a variable can be used in the code. 
 
+Global Scope
+If we declare a variable outside of any function or block, still can use it anywhere in the code that is global Scope.
+
+Function Scope
+If a variable is created  inside a function, that variable can be access only within that function 
+
+Block Scope
+This variable only exists inside these curly braces {}.Blocks are if statements, loops or any {} section.

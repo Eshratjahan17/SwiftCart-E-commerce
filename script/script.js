@@ -21,7 +21,34 @@ const loadProducts = (catagoryName) => {
        );
   
 }
+const loadProductDetails=async(id)=>{
+  const url=`https://fakestoreapi.com/products/${id}`;
+  const res= await fetch(url);
+  const details= await res.json();
+  displayProductDetails(details);
+}
+const displayProductDetails=(details)=>{
+  console.log(details);
+  const detailsBox = document.getElementById("details-container");
+  detailsBox.innerHTML=`
+  
+   <h2 class="text-xl mb-0 pb-5 font-medium text-center" >${details.title}</h2>
+    <p>${details.description}</p>
+        <div class="flex justify-between py-5">
+          <p class="text-xl font-semibold">$${details.price}</p>
+          <div class="ratings flex items-center justify-end " >
+             <i class="fa-solid fa-star text-yellow-500 "> </i>
 
+              <span>${details.rating.rate}  </span>
+              <span>(${details.rating.count} ) </span>
+
+            </div>
+    
+  
+  `
+  document.getElementById("details_modal").showModal();
+
+}
 const displayAllProducts = (allproducts) => {
   const productContainer=document.getElementById("trendingItems");
   productContainer.innerHTML= "";
@@ -53,9 +80,9 @@ const displayAllProducts = (allproducts) => {
             </h2>
             <p class="pt-0 pb-6 text-lg font-bold ">$109.95</p>
             <div class="card-actions cardBtngroup">
-              <button class="btn cardBtn shadow-md">
+              <button onclick="loadProductDetails(${product.id})" class="btn cardBtn shadow-md">
                 <i class="fa-regular fa-eye"></i>
-                ${product.price}
+               Details
               </button>
     
               <button class="btn cardBtn"><i class="fa-solid fa-cart-shopping"></i>
@@ -88,7 +115,9 @@ prodcutCrad.innerHTML=`
             <div class=" badge pl-0 ">
               <div class="badge badge-soft badge-primary">${product.category}</div>
             </div>
+          
             <div class="ratings flex items-center justify-end ">
+
               <i class="fa-solid fa-star text-yellow-500 "> </i>
               <span>${product.rating.rate}  </span>
               <span>(${product.rating.count} ) </span>
@@ -100,9 +129,9 @@ prodcutCrad.innerHTML=`
           </h2>
           <p class="pt-0 pb-6 text-lg font-bold ">$109.95</p>
           <div class="card-actions cardBtngroup">
-            <button class="btn cardBtn shadow-md">
+            <button onclick="my_modal_5.showModal()" class="btn cardBtn shadow-md">
               <i class="fa-regular fa-eye"></i>
-              ${product.price}
+              Details
             </button>
   
             <button class="btn cardBtn"><i class="fa-solid fa-cart-shopping"></i>
