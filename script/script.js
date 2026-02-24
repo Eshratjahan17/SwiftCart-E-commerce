@@ -129,7 +129,7 @@ prodcutCrad.innerHTML=`
           </h2>
           <p class="pt-0 pb-6 text-lg font-bold ">$109.95</p>
           <div class="card-actions cardBtngroup">
-            <button onclick="my_modal_5.showModal()" class="btn cardBtn shadow-md">
+            <button onclick="loadProductDetails(${product.id})" class="btn cardBtn shadow-md">
               <i class="fa-regular fa-eye"></i>
               Details
             </button>
